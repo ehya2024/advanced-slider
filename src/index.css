@@ -1,0 +1,132 @@
+@import url('https://v1.fontapi.ir/css/Vazir');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Vazir, sans-serif;
+}
+
+section {
+    margin: 40px auto;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    color: #2e2e2e;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    width: 55px;
+    height: 2px;
+    background-color: crimson;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-container {
+    width: 70%;
+    max-width: 1200px;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-container article {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 500ms;
+}
+
+.slider-container article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-container article h4 {
+    position: absolute;
+    bottom: 100px;
+    right: 10%;
+    color: wheat;
+}
+
+.slider-container article h5 {
+    position: absolute;
+    top: 351px;
+    right: 10%;
+    color: whitesmoke;
+    padding-left: 15px;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    font-size: 27px;
+    color: crimson;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #f31743;
+}
+
+.right-btn {
+    right: 15px;
+}
+
+.left-btn {
+    left: 15px;
+}
+
+.next-slide {
+    transform: translateX(100%);
+}
+
+.active-slide {
+    transform: translateX(0);
+}
+
+.last-slide {
+    transform: translateX(-100%);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 992px) {
+    .slider-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    section {
+        height: 420px;
+    }
+
+    .slider-container {
+        width: 98%;
+        height: 350px;
+    }
+
+    .slider-container article h4 {
+        bottom: 100px;
+    }
+    
+    .slider-container article h5 {
+        top: 255px;
+    }
+}
